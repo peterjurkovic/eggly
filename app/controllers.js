@@ -24,4 +24,14 @@ app.controller("MainCtrl", ['$scope',
             {"id": 3, "name": "Humor"}
         ];
 
+        $scope.currentCategory = null;
+
+        $scope.setCurrentCategory =  function(category){
+            $scope.currentCategory = category;
+        }
+
+        $scope.isCurrentCategory = function (category){
+            return category !== null && $scope.currentCategory !== null && category.name === $scope.currentCategory.name;
+        }
+
     }]);
